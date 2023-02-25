@@ -3,28 +3,27 @@ package com.br.eldutra.vendas.domain.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.math.BigDecimal;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Entity
-@Table(name = "produto")
-public class Produto {
+@Table(name = "usuario")
+public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Integer id;
-
-    @Column(name = "descricao")
-    @NotEmpty(message = "{campo.descricao.obrigatorio}")
-    private String descricao;
-
-    @Column(name = "preco_unitario")
-    @NotEmpty(message = "{campo.preco.obrigatorio}")
-    private BigDecimal preco;
+    @Column
+    @NotEmpty(message = "{campo.login.obrigatorio}")
+    private String login;
+    @Column
+    @NotEmpty(message = "{campo.senha.obrigatorio}")
+    private String senha;
+    @Column
+    private boolean admin;
 
 }
