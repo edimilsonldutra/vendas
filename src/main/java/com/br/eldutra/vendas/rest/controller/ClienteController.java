@@ -4,6 +4,7 @@ import com.br.eldutra.vendas.domain.entity.Cliente;
 import com.br.eldutra.vendas.domain.repository.ClienteRepository;
 import io.swagger.annotations.*;
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
