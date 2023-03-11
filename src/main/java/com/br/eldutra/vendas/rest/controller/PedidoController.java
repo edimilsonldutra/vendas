@@ -9,7 +9,6 @@ import com.br.eldutra.vendas.rest.dto.InformacaoPedidoDTO;
 import com.br.eldutra.vendas.rest.dto.PedidoDTO;
 import com.br.eldutra.vendas.service.PedidoService;
 import jakarta.validation.Valid;
-import org.springframework.http.HttpStatus;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
