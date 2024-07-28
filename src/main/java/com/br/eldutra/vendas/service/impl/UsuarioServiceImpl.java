@@ -3,6 +3,7 @@ package com.br.eldutra.vendas.service.impl;
 import com.br.eldutra.vendas.domain.entity.Usuario;
 import com.br.eldutra.vendas.domain.repository.UsuarioRepository;
 import com.br.eldutra.vendas.exception.SenhaInvalidaException;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,10 +14,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@RequiredArgsConstructor
 public class UsuarioServiceImpl implements UserDetailsService {
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+    private final PasswordEncoder passwordEncoder;
 
     @Autowired
     private UsuarioRepository usuarioRepository;
